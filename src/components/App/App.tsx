@@ -27,11 +27,11 @@ function App() {
       setIsError(false);
       loaderShow();
       const data = await fetchMovies(query);
+      setMovies(data);
       if (data.length === 0) {
         toast.error("No movies found for your request.");
         return;
       }
-      setMovies(data);
     } catch (error) {
       toast.error("Error fetching movies");
       console.log(error);
