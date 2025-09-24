@@ -18,6 +18,14 @@ export default function SearchBar({ onSubmit }: SearchBarProps) {
     <>
       <header className={css.header}>
         <div className={css.container}>
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              className: "",
+              duration: 1000,
+              removeDelay: 1000,
+            }}
+          />
           <a
             className={css.link}
             href="https://www.themoviedb.org/"
